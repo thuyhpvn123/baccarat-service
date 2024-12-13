@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN qrcodejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+    <h2>BIG TWO </h2>
+    <div class="container bg-light ">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">     
+                            <!--Register Participant Modal  -->
+                <div>
+                        <button type="click" class="btn btn-primary m-t-20" id="dealCards">
+                            DEAL CARDS
+                        </button>
+                    <!-- </form> -->
+                </div>
+                <br>
+                <div>
+                    <form id="getKey">
+                        <div class="form-group">
+                        <label for="publicKey">Public Key</label>
+                        <input id="publicKey" type="text" class="form-control" value="80fbb74c4d6a803ae42f3bf86c72756adb4a40eebfaab15fa4a6db4d90aaeca31006fac317987ec076cc047010918f29"></input>
+                        <label for="hash">Hash</label>
+                        <input id="hash" type="text" class="form-control" value="25266f7177aab285dbe4a0c5d551287dd5d7dc79fb571fec79804d7ba60fdf5b"></input>
+                        <label for="sign">Sign</label>
+                        <input id="sign" type="text" class="form-control" value="b5f5eef0aac6382e02322a09e892f37c92c773ad4740be45cb739a867901dfc16ca3de55e874e1ca48415f88702f3a7011cfd0a0ff27dd68cfcde23bbcd8c88294ede9701ac9bf0299191da06022bab867e48145b62493ab5ee76d9c6043c846"></input>
+                        <!-- <label for="addressPlayer">Address</label>
+                        <input id="addressPlayer" type="text" class="form-control" value="59d77e1fe10de6ab35e1d30e46eca89567971d62"></input> -->
+                        <span class="error error_getKey"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-t-20" >
+                            GET KEY
+                        </button>
+                    </form>
+                </div>
+                <br>
+                <div>
+                    <form id="decrypt">
+                        <div class="form-group">
+                            <label for="encryptedCard1">Encrypted Card1</label>
+                            <input id="encryptedCard1" type="text" class="form-control" ></input>
+                            <label for="key1">Key1</label>
+                            <input id="key1" type="text" class="form-control"></input>
+                            <label for="encryptedCard2">Encrypted Card2</label>
+                            <input id="encryptedCard2" type="text" class="form-control" ></input>
+                            <label for="key2">Key2</label>
+                            <input id="key2" type="text" class="form-control"></input>
+                            <label for="encryptedCard3">Encrypted Card3</label>
+                            <input id="encryptedCard3" type="text" class="form-control" ></input>
+                            <label for="key3">Key3</label>
+                            <input id="key3" type="text" class="form-control"></input>
+
+                            <span class="error error_decrypt"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-t-20" >
+                            DECRYPT CARDS
+                        </button>
+                    </form>
+                    <br>
+                    <button type="button" class="btn btn-primary m-t-20" id="test">
+                        TEST DECRYPT
+                    </button>
+                </div>
+                <br>
+                <form id="getSign">
+                    <div class="form-group">
+                    <label for="privateKey">Private Key</label>
+                    <input id="privateKey" type="text" class="form-control" value="068ab5318764afcaa90089c3bbe54bfab7c472dffc9cf4abf5ab3024b2111228"></input>
+                    <label for="addressSign">Address</label>
+                    <input id="addressSign" type="text" class="form-control" value="B50b908fFd42d2eDb12b325e75330c1AaAf35dc0"></input>        
+                    <span class="error error_player"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-t-20" >
+                        Get sign
+                    </button>
+                </form>
+                <div>
+                    <form id="comfirm">
+                        <div class="form-group">
+                        <label for="roomidComfirm">Room number</label>
+                        <input id="roomidComfirm" type="text" class="form-control" value=""></input>
+                        <span class="error error_comfirm"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-t-20" id="comfirm">
+                            COMFIRM
+                        </button>
+                    </form>
+                </div>
+
+                <div id="log-container">
+                    <h4>Log:</h5>
+                        <pre id="log-content"></pre>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script type="application/javascript" src="../js/Websocket.js"></script>
+</body>
+</html>

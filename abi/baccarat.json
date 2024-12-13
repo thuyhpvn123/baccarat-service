@@ -1,0 +1,1111 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address[]",
+        "name": "chosenArr",
+        "type": "address[]"
+      }
+    ],
+    "name": "chosePlayerCompare",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "closeRoom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string[]",
+        "name": "decodedKey",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "decodedCardsArr",
+        "type": "string[]"
+      }
+    ],
+    "name": "comfirm",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "stateMutability": "payable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "RegisterTimeEnded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "RegisterTimeNotYetEnded",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "win",
+        "type": "string"
+      }
+    ],
+    "name": "CompareToBidder",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "roomNumber",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bidAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "CreatedRoom",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "registerTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bidAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_playersAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "CreateRoom",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "extraTime",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseRegisterTime",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "playerCloseRoom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "register",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "message",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "roomNumber",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      }
+    ],
+    "name": "Registerd",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string[]",
+        "name": "cardsArr",
+        "type": "string[]"
+      }
+    ],
+    "name": "setDeck",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "roomNumber",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "result",
+        "type": "string"
+      }
+    ],
+    "name": "SetDeck",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "setNewAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_newTimeLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTimeLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawFund",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOfRegisteredFunds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "totalRegisterFund",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOfwithdrawFunds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "x",
+        "type": "uint256"
+      }
+    ],
+    "name": "convert",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "roomID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "registerEndTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "NUM_PLAYERS",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "deck",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum ThreeCardsMain.State",
+            "name": "state",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "numberComfirm",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "playerId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "addr",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "cards",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "keys",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "decodedCards",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "ranks",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "totalRank",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastDigit",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "win",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct ThreeCardsMain.PlayerCopy[]",
+            "name": "playersArr",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "address",
+            "name": "bidder",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "attendants",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "chosenPlayers",
+            "type": "address[]"
+          }
+        ],
+        "internalType": "struct ThreeCardsMain.RoomCopy",
+        "name": "y",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "card",
+        "type": "uint256"
+      }
+    ],
+    "name": "getACard",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "getAllPlayersAdd",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "getAPlayerBytes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "playerId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "cards",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "keys",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "decodedCards",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "ranks",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRank",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lastDigit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "win",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct ThreeCardsMain.PlayerCopy",
+        "name": "y",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "getChosenPlayerAddr",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "GetHistory",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "roomID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "registerEndTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "NUM_PLAYERS",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "deck",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum ThreeCardsMain.State",
+            "name": "state",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "numberComfirm",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "playerId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "addr",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "cards",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "keys",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "bytes[]",
+                "name": "decodedCards",
+                "type": "bytes[]"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "ranks",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "totalRank",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastDigit",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "win",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct ThreeCardsMain.PlayerCopy[]",
+            "name": "playersArr",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "address",
+            "name": "bidder",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "attendants",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "chosenPlayers",
+            "type": "address[]"
+          }
+        ],
+        "internalType": "struct ThreeCardsMain.RoomCopy[]",
+        "name": "arrayRoom",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "getPlayer",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "playerId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "string[]",
+            "name": "cards",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "keys",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "decodedCards",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "ranks",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRank",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lastDigit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "win",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct ThreeCardsMain.Player",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "player",
+        "type": "address"
+      }
+    ],
+    "name": "getPlayerCards",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPlayersBytesAroom",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "playerId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "cards",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "keys",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "decodedCards",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "ranks",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRank",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lastDigit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "win",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct ThreeCardsMain.PlayerCopy[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_roomNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRoom",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "bidder",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roomID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "NUM_PLAYERS",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum ThreeCardsMain.State",
+        "name": "state",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address[]",
+        "name": "attendants",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "registerEndTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address[]",
+        "name": "chosenPlayers",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "playersAmount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTotalActiveRoom",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getUserLiveItem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      }
+    ],
+    "name": "getUserLiveLength",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getUserLiveRoomIds",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "registeredFunds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "roomNumber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalActiveRoom",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "TotalActiveRoomLength",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalRoom",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

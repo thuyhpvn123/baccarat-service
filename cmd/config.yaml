@@ -1,0 +1,20 @@
+
+APIAddress: "0.0.0.0:8999" 
+Address: "35c142eaecb65f866e8bb5a0713aa4319e6a03e4" # Admin Address
+PrivateKey_: "459e22140571cc7f99d3ffd7f858fc500616d2aa9aca8c24ea0fcebb55f6bfe9"
+MetaNodeVersion: "0.0.1" 
+
+NodeAddress: "5d1f72ea49a9400f808ab2ef89b022d6f793fdeb" 
+NodeConnectionAddress: "node" 
+
+StorageAddress: "0xda7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+BaccaratAddress: "0x03Ab12d9b0631AEDf312Ff37fd1c005c1Eef9f31"  # Kventure Address
+BaccaratABIPath: "../abi/baccarat.json"
+
+DnsLink_: "http://34.93.102.218:7777/api/dns/connection-address/"
+
+PathLevelDB : "../db"
+API_PORT: ":8999"
+
